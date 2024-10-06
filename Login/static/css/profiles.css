@@ -1,0 +1,197 @@
+    /* CSS for better layout */
+    .update-button {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .update-form {
+        margin-bottom: 20px;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+background-color: #fefefe;
+margin: 15% auto;
+padding: 10px; /* Reduced padding */
+border: 1px solid #888;
+max-width: 300px; /* Adjust the maximum width as needed */
+width: 80%; /* Adjust the width as needed */
+}
+
+.close {
+color: #aaa;
+float: right;
+font-size: 20px; /* Reduced font size */
+font-weight: bold;
+margin-top: -10px; /* Adjust the position */
+margin-right: -10px; /* Adjust the position */
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* Basic Reset */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: url("../images/bg1.png") no-repeat center center fixed; /* Background image */
+background-size: cover;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+color: #333; /* Text color */
+}
+
+.container {
+width: 100%;
+}
+
+.header-box {
+background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+border-radius: 5px;
+padding: 20px;
+margin: 20px auto; 
+width: 90%;
+max-width: 600px;
+box-shadow: 0 2px 4px rgba(69, 64, 64, 0.1);
+text-align: center; 
+}
+
+h1 {
+color: #333; /* Text color */
+margin: 0;
+font-size: 2em;
+}
+
+.profile {
+background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+border: 1px solid #ccc; /* Light gray border */
+border-radius: 5px;
+padding: 20px;
+margin: 10px 0;
+width: 90%;
+max-width: 600px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.profile:hover {
+transform: translateY(-5px);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile p {
+margin: 10px 0;
+line-height: 1.6;
+}
+
+.profile p strong {
+color: #555;
+}
+
+button {
+padding: 10px 20px;
+margin-top: 10px;
+border: none;
+background-color: #007BFF; /* Default blue color */
+color: white;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+transition: background-color 0.3s ease;
+}
+
+button:hover {
+background-color: #0056b3; /* Darker blue color on hover */
+}
+
+@media (max-width: 600px) {
+.profile {
+    width: 95%;
+    padding: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+}
+
+/* Profile Image Styles (if applicable) */
+.profile img {
+display: block;
+max-width: 100px;
+margin: 0 auto 20px;
+border-radius: 50%;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography Improvements */
+.profile p {
+font-size: 16px;
+color: #333; /* Text color */
+}
+
+.profile p strong {
+font-weight: bold;
+}
+/* CSS for the input fields and labels */
+.profile input[type="text"],
+.profile input[type="email"],
+.profile input[type="date"] {
+width: 100%;
+padding: 8px;
+margin-top: 6px;
+margin-bottom: 16px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+.profile label {
+font-weight: bold;
+margin-top: 12px;
+}
+
+.profile input[type="submit"] {
+background-color: #007BFF;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+
+.profile input[type="submit"]:hover {
+background-color: #0056b3;
+}
+
+/* Additional styling for the form container */
+.update-form {
+background-color: rgba(255, 255, 255, 0.8);
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+margin-top: 20px;
+}

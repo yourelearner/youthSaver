@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Youth Saver</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='images/youthSaver.png') }}" type="image/icon type">
+</head>
+<body>
+  <!-- Navbar/Icon-->
+  <div id="home">
+    <ul>
+      <a href="#home"><img class="img-icon" src="{{ url_for('static', filename='images/youthSaver.png') }}" alt="youth saver"></a>
+      <!-- Right-sided Navbar links: About, Services, Team, Contact, Login-->
+      <li style="float:right"><a href="{{ url_for('login_page') }}">LOGIN</a></li>
+      <li style="float:right"><a href="#contact" class="">CONTACT</a></li>
+      <li style="float:right"><a href="#team" class="">TEAM</a></li>
+      <li style="float:right"><a href="#features" class="">FEATURES</a></li>
+      <li style="float:right"><a href="#about" class="">ABOUT</a></li>
+    </ul>
+  </div>
+
+  <header class="img-header"></header>
+  <div class="img-right">
+    <!--Right picture inside a div-->
+    <img src="{{ url_for('static', filename='images/front-image.png') }}" alt="">
+  </div>
+  <div class="text-container-left">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>YOUTH SAVER</h1>
+    <h5>We're here for you.</h5>
+    <br>
+    <p>Reporting and resolution for safer school to ensure the mental wellness of a student attending the school without any problem.</p>
+    <br>
+    <button class="get-started"><a href="{{ url_for('profiles') }}"a><strong>GET STARTED</strong></button>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!--About Section-->
+  <div class="about-website-container" id="about">
+    <h1>ABOUT THE WEBSITE</h1>
+    <p>Key features of our website</p>
+    <!--Grid is used to make 3 or more rows each-->
+    <div class="grid-container" style="margin-top: 30px">
+      <div>
+        <img src="{{ url_for('static', filename='images/responsive.png') }}" alt="" width="90" height="90">
+        <p>Responsive</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='images/passion.png') }}" alt="" width="90" height="90">
+        <p>Passion</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='images/layout.png') }}" alt="" width="90" height="90">
+        <p>Design</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <!--Features section-->
+  <div class="features-bg-container" id="features">
+    <!--Right text div-->
+    <div class="features-text">
+      <h1 style="color: #f9cc48;">FEATURES</h1>
+      <br>
+      <h2 style="color: #f9cc48;">Report</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
+      <h2 style="color: #f9cc48;">Report</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
+      <h2 style="color: #f9cc48;">Report</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+    <!--Right div for another picture-->
+    <div class="features-picture1">
+      <img src="{{ url_for('static', filename='images/AHHH.jpeg') }}" alt="" width="570" height="380">
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!--Team Section-->
+  <div class="team-container" id="team">
+    <h1>THE TEAM</h1>
+    <p>From BSCS 2-5, Group 3</p>
+    <br>
+    <div class="team-grid-container1">
+      <div><h2>Gatpolintan, Leonard</h2></div>
+      <div><h2>Manuel, Kurt Chester</h2></div>
+      <div><h2>Cordova, Brant Yadi</h2></div>
+      <div><h2>Ariño, John Vincent</h2></div>
+      <div><h2>Lumpot, Aldrin</h2></div>
+      <div><h4>Leader</h4></div>
+      <div><h4>Back-end</h4></div>
+      <div><h4>Front-end</h4></div>
+      <div><h4>Front-end</h4></div>
+      <div><h4>Front-end</h4></div>
+    </div>
+    <div class="team-grid-container2">
+      <div><h2>Baldava, Hazel</h2></div>
+      <div><h2>Dollete, Jhoelly Gwynne</h2></div>
+      <div><h4>Front-end</h4></div>
+      <div><h4>Front-end</h4></div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!--Contact Section-->
+  <div class="contact-container" id="contact">
+    <h1>CONTACT</h1>
+    <p>Have some suggestions? Contact us.</p>
+    <div class="info-container" style="margin-top: 30px">
+      <div>
+        <img src="{{ url_for('static', filename='images/location.png') }}" alt="" width="90" height="90">
+        <p>Location</p>
+        <br>
+        <p>Bacoor, Cavite</p>
+      </div>
+      <div>
+        <img src="{{ url_for('static', filename='images/email.png') }}" alt="" width="90" height="90">
+        <p>Email us</p>
+        <br>
+        <p>youth.saver@email.com</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <!--Footer Section-->
+  <footer>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="#home" class="topButton">To the top</a>
+    <br>
+    <br>
+    <p style="font-size: small;">This website is made for school purposes only.</p>
+    <p style="font-size: small;">@jdollete</p>
+  </footer>
+
+  
+</body>
+</html>

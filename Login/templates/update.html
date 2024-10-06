@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profiles</title>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/profiles.css') }}">
+</head>
+<body>
+    <h1>User Profiles</h1>
+    <input type="text" id="searchBox" placeholder="Search profiles" oninput="filterProfiles()">
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>User not found.</p>
+        </div>
+    </div>
+    {% for profile in profiles %}
+        <div class="profile" id="profile_{{ profile._id }}">
+            <p><strong>Name:</strong> {{ profile.first_name }}</p>
+            <p><strong>Middle Initial:</strong> {{ profile.middle_initial }}</p>
+            <p><strong>Surname:</strong> {{ profile.surname }}</p>
+            <p><strong>Birth Date:</strong> {{ profile.birth_date }}</p>
+            <p><strong>Gender:</strong> {{ profile.gender }}</p>
+            <p><strong>Address:</strong> {{ profile.address }}</p>
+            <p><strong>Email:</strong> {{ profile.gmail }}</p>
+            <p><strong>Student Number:</strong> {{ profile.student_number }}</p>
+            <p><strong>Username:</strong> {{ profile.username }}</p>
+
+            <button onclick="toggleForm('{{ profile._id }}')" class="update-button">Update</button>
+            <form id="form_{{ profile._id }}" action="/update_profile" method="post" style="display: none;" class="update-form">
+                <input type="hidden" name="profile_id" value="{{ profile._id }}">
+                <input type="text" name="first_name" placeholder="First Name" value="{{ profile.first_name }}">
+                <input type="text" name="middle_initial" placeholder="Middle Initial" value="{{ profile.middle_initial }}">
+                <input type="text" name="surname" placeholder="Surname" value="{{ profile.surname }}">
+                <input type="date" name="birth_date" placeholder="Birth Date" value="{{ profile.birth_date }}">
+                <input type="text" name="gender" placeholder="Gender" value="{{ profile.gender }}">
+                <input type="text" name="address" placeholder="Address" value="{{ profile.address }}">
+                <input type="email" name="gmail" placeholder="Email" value="{{ profile.gmail }}">
+                <input type="text" name="student_number" placeholder="Student Number" value="{{ profile.student_number }}">
+                
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    {% endfor %}
+
+    <button onclick="location.href='/back_to_admin'" class="update-button">Back to Admin Page</button>
+
+    <script>
+        function toggleForm(profileId) {
+            var form = document.getElementById('form_' + profileId);
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        }
+
+        function filterProfiles() {
+            var searchInput = document.getElementById('searchBox').value.toLowerCase();
+            var profiles = document.getElementsByClassName('profile');
+            var noResultsModal = document.getElementById('myModal');
+            var found = false;
+
+            for (var i = 0; i < profiles.length; i++) {
+                var profile = profiles[i];
+                var name = profile.querySelector('p:nth-child(1)').textContent.toLowerCase();
+                var email = profile.querySelector('p:nth-child(7)').textContent.toLowerCase();
+                var studentNumber = profile.querySelector('p:nth-child(8)').textContent.toLowerCase();
+
+                if (name.includes(searchInput) || email.includes(searchInput) || studentNumber.includes(searchInput)) {
+                    profile.style.display = '';
+                    found = true;
+                } else {
+                    profile.style.display = 'none';
+                }
+            }
+
+            if (!found) {
+        setTimeout(function() {
+            noResultsModal.style.display = 'block';
+        }, 700); // 5000 milliseconds delay
+    } else {
+        noResultsModal.style.display = 'none';
+    }
+}
+
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Page container styles */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Custom dropdown styles */
+.dropdown-container {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+}
+
+.dropdown-toggle {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: block; /* Set to block by default */
+  position: absolute;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 0;
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.dropdown-menu.show {
+  opacity: 1; /* Fade in */
+}
+
+
+.dropdown-item {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+  background-color: #3e8e41;
+}
+
+/* Content section styles */
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+#content label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+#content input[type="text"],
+#content input[type="date"],
+#content select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  height: 30px;
+}
+
+/* Navbar styles */
+.navbar-custom {
+  background-color: #14467c;
+  width: 100%;
+  position: relative;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: #f9cc48;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+#optionList {
+  position: fixed;
+  top: 50%; /* Adjust as needed */
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #f8f9fa; /* Adjust background color as needed */
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for a slight elevation effect */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+#optionList li {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-bottom: 3px; /* Adjust spacing between items */
+  border-radius: 3px;
+}
+
+#optionList li:hover {
+  background-color: #e9ecef; /* Adjust hover background color as needed */
+}
+
+/* Optional: make the text smaller */
+#optionList li {
+  font-size: 0.9rem;
+}

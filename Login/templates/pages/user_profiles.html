@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+    <div class="profile" style="text-align: center; margin-top: 50px;">
+        <h1>Your Profile</h1>
+        <div class="profile-info" style="margin-top: 20px;">
+            <form id="profileForm" method="POST" action="/update_user_profile" enctype="multipart/form-data">
+                <label for="profilePictureInput">
+                    <img id="profilePicture" src="{{ user_profile.profile_picture_path }}" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; cursor: pointer;">
+                    <input type="file" id="profilePictureInput" name="profile_picture" accept="image/*" style="display: none;">
+                </label>
+                <ul id="profileInfoList" style="list-style-type: none; padding: 0; margin-top: 20px;">
+                    <li style="margin-bottom: 10px;"><strong>Name:</strong> <span id="fullName">{{ user_profile.full_name }}</span></li>
+                    <li style="margin-bottom: 10px;"><strong>Address:</strong> <span id="address">{{ user_profile.address }}</span></li>
+                    <li style="margin-bottom: 10px;"><strong>Phone Number:</strong> <span id="phoneNumber">{{ user_profile.phone_number }}</span></li>
+                    <li style="margin-bottom: 10px;"><strong>Birthday:</strong> <span id="birthday">{{ user_profile.birthday }}</span></li>
+                    <li style="margin-bottom: 10px;"><strong>Hobbies:</strong> <span id="hobbies">{{ user_profile.hobbies }}</span></li>
+                    <li style="margin-bottom: 10px;"><strong>About me:</strong> <span id="about_me">{{ user_profile.about_me }}</span></li>
+                    
+                </ul>
+                <button type="button" id="editButton" onclick="enableEditing()">Edit</button>
+                <button type="submit" id="saveButton" style="display: none;">Save</button>
+                <button type="button" id="cancelButton" style="display: none;" onclick="cancelEditing()">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <button onclick="location.href='/back_to_student'" class="back-button">Back</button>
+
+    <script>
+        function enableEditing() {
+            var elements = document.querySelectorAll('#profileInfoList span');
+            elements.forEach(function(element) {
+                var input = document.createElement('input');
+                input.setAttribute('type', 'text');
+                input.setAttribute('value', element.innerText);
+                input.setAttribute('name', element.id); // Set the name attribute to match the span's id
+                element.parentNode.replaceChild(input, element);
+            });
+            document.getElementById('profilePictureInput').disabled = false;
+            document.getElementById('editButton').style.display = 'none';
+            document.getElementById('saveButton').style.display = 'block';
+            document.getElementById('cancelButton').style.display = 'block';
+
+            // Show 'Hobbies' and 'About Me' input fields
+            document.getElementById('hobbies').style.display = 'block';
+            document.getElementById('about_me').style.display = 'block';
+            document.querySelector('label[for="hobbies"]').style.display = 'block';
+            document.querySelector('label[for="about_me"]').style.display = 'block';
+        }
+
+        function cancelEditing() {
+    var inputs = document.querySelectorAll('#profileInfoList input');
+    inputs.forEach(function(input) {
+        var span = document.createElement('span');
+        span.innerText = input.value;
+        span.setAttribute('id', input.name); // Set the span's id attribute to match the input's name
+        input.parentNode.replaceChild(span, input);
+    });
+
+    document.getElementById('profilePictureInput').disabled = true;
+    document.getElementById('editButton').style.display = 'block';
+    document.getElementById('saveButton').style.display = 'none';
+    document.getElementById('cancelButton').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

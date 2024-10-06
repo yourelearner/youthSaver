@@ -1,0 +1,176 @@
+
+    body,h1,h2,h3,h4,h5,h6 {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #14467c;
+    }
+    body, html {
+      height: 100%;
+      line-height: 1.6;
+      background-color: #e5dcce;
+    }
+    * {
+        margin: 0px;
+        padding: 0px;
+     }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-image: linear-gradient(#14467c,#2e5b8b);
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: #f9cc48;
+        text-align: center;
+        padding: 14px 16px !important;
+        text-decoration: none;
+      }
+      
+      li a:hover {
+        background-color: #2e5b8b;
+      }
+      .img-icon {
+        max-width: 3% !important;
+        max-height: 10% !important;
+        float: left;
+        padding: 10px 25px 10px !important;
+      } 
+      .img-right {
+        float: right;
+        padding: 0px 140px 0px !important;
+      }
+      .text-container-left{
+        text-align: center;
+        padding: 0px 150px 0px;
+      }
+      .get-started {
+        border-color: #14467c;
+        background-color: #14467c;
+        border-radius: 15px;
+        color: #f9cc48;
+        padding: 10px;
+        width: 12%;
+        transition: width cubic-bezier(1, 0, 0, 2);
+      }
+      .get-started:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        font-size: 90%;
+        width: 14%;
+      }
+      .img-header {
+        background-position: center top;
+        background-size: cover;
+        background-image: url("../images/header.png");
+        min-height: 100%;
+      }
+      .about-website-container {
+        text-align: center;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 80px 200px;
+        gap: 70px;
+        background-color: #e5dcce;
+        padding: 10px;
+        margin: 5%;
+      }
+      .features-bg-container{
+        background-color: #14467c !important;
+        padding: 90px 40px 400px !important;
+        color: #f9cc48;
+      }
+      .features-text {
+        text-align: center;
+        float: right;
+        padding: 0px 90px 0px;
+      }
+      .features-picture1 {
+        width: 300px; 
+        height: 110px; 
+    }
+    .team-container{
+      text-align: center;
+    }
+    .team-grid-container1 {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      grid-template-rows: 80px 100px;
+      gap: 5px;
+      background-color: #e5dcce;
+      padding: 10px 100px;
+    }
+    .team-grid-container1 > div {
+      background-color: #f9cc48;
+      border-radius: 8px;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 15px;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    .team-grid-container2 {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: 80px 100px;
+      gap: 5px;
+      background-color: #e5dcce;
+      padding: 10px 350px;
+    }
+    .team-grid-container2 > div {
+      background-color: #f9cc48;
+      border-radius: 8px;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 15px;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    .contact-container{
+      text-align: center;
+    }
+    .info-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: 80px 200px;
+      gap: 70px;
+      background-color: #e5dcce;
+      padding: 10px 350px;
+      margin: 5%;
+    }
+    footer {
+      background-color: #14467c;
+      text-align: center;
+      color: #f9cc48;
+      height: 300px;
+    }
+    .topButton:link, .topButton:visited {
+      background-color: #cfaa3c;
+      color: #14467c;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 8px;
+    }
+    
+    .topButton:hover, .topButton:active {
+      background-color: #f3ca50;
+      width: px;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+      /* CSS for the link */
+      .get-started a {
+        text-decoration: none; /* Remove underline from the link */
+        color: inherit; /* Use the default text color */
+    }
+
+    /* CSS for the link when pressed */
+    .get-started a:active {
+        color: #999; /* Change the color to a slightly different shade */
+    }

@@ -1,0 +1,59 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(244, 244, 244, 0.7); /* Semi-transparent background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Page container styles */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Content container styles */
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Input styles */
+#content input[type="text"],
+#content input[type="date"],
+#content select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 30px;
+}
+
+/* Label styles */
+#content label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+}
